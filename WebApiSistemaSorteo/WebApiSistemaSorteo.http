@@ -1,0 +1,6 @@
+@WebApiSistemaSorteo_HostAddress = http://localhost:5009
+
+GET {{WebApiSistemaSorteo_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,986 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "WebApiSistemaSorteo",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/AsignarNumero": {
+      "get": {
+        "tags": [
+          "AsignarNumero"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/AsignarNumero/{idCliente}/{idSorteo}/{idUSuario}": {
+      "get": {
+        "tags": [
+          "AsignarNumero"
+        ],
+        "parameters": [
+          {
+            "name": "idCliente",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idUSuario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "idSorteo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/AsignarNumero/{id}": {
+      "put": {
+        "tags": [
+          "AsignarNumero"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "AsignarNumero"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/apiSorteo/Cliente": {
+      "get": {
+        "tags": [
+          "Cliente"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Cliente"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Cliente"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Cliente"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Cliente"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateClienteDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateClienteDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateClienteDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/apiSorteo/Cliente/{id}": {
+      "get": {
+        "tags": [
+          "Cliente"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Cliente"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Cliente"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Sorteo": {
+      "get": {
+        "tags": [
+          "Sorteo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Sorteo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SorteoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SorteoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SorteoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Sorteo/{id}": {
+      "get": {
+        "tags": [
+          "Sorteo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Sorteo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Sorteo"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Usuario": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsuarioDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Usuario/{id}": {
+      "get": {
+        "tags": [
+          "Usuario"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Usuario"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "type": "string"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Usuario"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Cliente": {
+        "type": "object",
+        "properties": {
+          "idCliente": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombreCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "numerosAsignados": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NumerosAsignado"
+            },
+            "nullable": true
+          },
+          "numerosDisponiblesClientes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NumerosDisponiblesCliente"
+            },
+            "nullable": true
+          },
+          "usuarios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Usuario"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CreateClienteDTO": {
+        "type": "object",
+        "properties": {
+          "nombreCliente": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "NumerosAsignado": {
+        "type": "object",
+        "properties": {
+          "idNumeroAsignado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idUsuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idCliente": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idSorteo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numeroAsignado": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaAsignacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "representacionNumeroAsignado": {
+            "type": "string",
+            "nullable": true
+          },
+          "idClienteNavigation": {
+            "$ref": "#/components/schemas/Cliente"
+          },
+          "idSorteoNavigation": {
+            "$ref": "#/components/schemas/Sorteo"
+          },
+          "idUsuarioNavigation": {
+            "$ref": "#/components/schemas/Usuario"
+          }
+        },
+        "additionalProperties": false
+      },
+      "NumerosDisponiblesCliente": {
+        "type": "object",
+        "properties": {
+          "idNumeroDisponible": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idCliente": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "numero": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaCreacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "idClienteNavigation": {
+            "$ref": "#/components/schemas/Cliente"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Sorteo": {
+        "type": "object",
+        "properties": {
+          "idSorteo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombreSorteo": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaInicio": {
+            "type": "string",
+            "format": "date"
+          },
+          "fechaFin": {
+            "type": "string",
+            "format": "date"
+          },
+          "numerosAsignados": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NumerosAsignado"
+            },
+            "nullable": true
+          },
+          "usuarioSorteos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UsuarioSorteo"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SorteoDTO": {
+        "type": "object",
+        "properties": {
+          "nombreSorteo": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaInicio": {
+            "type": "string",
+            "format": "date"
+          },
+          "fechaFin": {
+            "type": "string",
+            "format": "date"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Usuario": {
+        "type": "object",
+        "properties": {
+          "idUsuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idCliente": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombreUsuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo": {
+            "type": "string",
+            "nullable": true
+          },
+          "fechaRegistro": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "idClienteNavigation": {
+            "$ref": "#/components/schemas/Cliente"
+          },
+          "numerosAsignados": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/NumerosAsignado"
+            },
+            "nullable": true
+          },
+          "usuarioSorteos": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/UsuarioSorteo"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UsuarioDTO": {
+        "type": "object",
+        "properties": {
+          "idCliente": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombreUsuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UsuarioSorteo": {
+        "type": "object",
+        "properties": {
+          "idUsuarioSorteo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idUsuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idSorteo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaAsignacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "idSorteoNavigation": {
+            "$ref": "#/components/schemas/Sorteo"
+          },
+          "idUsuarioNavigation": {
+            "$ref": "#/components/schemas/Usuario"
+          }
+        },
+        "additionalProperties": false
+      },
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}

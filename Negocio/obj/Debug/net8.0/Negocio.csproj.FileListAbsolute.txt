@@ -1,0 +1,15 @@
+C:\Users\yoha1\source\repos\WebApiSistemaSorteo\Negocio\bin\Debug\net8.0\Negocio.deps.json
+C:\Users\yoha1\source\repos\WebApiSistemaSorteo\Negocio\bin\Debug\net8.0\Negocio.dll
+C:\Users\yoha1\source\repos\WebApiSistemaSorteo\Negocio\bin\Debug\net8.0\Negocio.pdb
+C:\Users\yoha1\source\repos\WebApiSistemaSorteo\Negocio\bin\Debug\net8.0\Datos.dll
+C:\Users\yoha1\source\repos\WebApiSistemaSorteo\Negocio\bin\Debug\net8.0\Datos.pdb
+C:\Users\yoha1\source\repos\WebApiSistemaSorteo\Negocio\obj\Debug\net8.0\Negocio.csproj.AssemblyReference.cache
+C:\Users\yoha1\source\repos\WebApiSistemaSorteo\Negocio\obj\Debug\net8.0\Negocio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\yoha1\source\repos\WebApiSistemaSorteo\Negocio\obj\Debug\net8.0\Negocio.AssemblyInfoInputs.cache
+C:\Users\yoha1\source\repos\WebApiSistemaSorteo\Negocio\obj\Debug\net8.0\Negocio.AssemblyInfo.cs
+C:\Users\yoha1\source\repos\WebApiSistemaSorteo\Negocio\obj\Debug\net8.0\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\yoha1\source\repos\WebApiSistemaSorteo\Negocio\obj\Debug\net8.0\Negocio.csproj.Up2Date
+C:\Users\yoha1\source\repos\WebApiSistemaSorteo\Negocio\obj\Debug\net8.0\Negocio.dll
+C:\Users\yoha1\source\repos\WebApiSistemaSorteo\Negocio\obj\Debug\net8.0\refint\Negocio.dll
+C:\Users\yoha1\source\repos\WebApiSistemaSorteo\Negocio\obj\Debug\net8.0\Negocio.pdb
+C:\Users\yoha1\source\repos\WebApiSistemaSorteo\Negocio\obj\Debug\net8.0\ref\Negocio.dll
